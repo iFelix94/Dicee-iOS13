@@ -9,10 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var diceImageView1: UIImageView!
+    @IBOutlet var diceImageView2: UIImageView!
 
-    @IBOutlet weak var diceImageView1: UIImageView!
-    @IBOutlet weak var diceImageView2: UIImageView!
-    
     var dices = [
         UIImage(named: "DiceOne"),
         UIImage(named: "DiceTwo"),
@@ -21,13 +20,13 @@ class ViewController: UIViewController {
         UIImage(named: "DiceFive"),
         UIImage(named: "DiceSix")
     ]
-    
+
     var leftDiceNumber = 1
     var rightDiceNumber = 4
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         diceImageView1.image = dices[0]
         diceImageView2.image = dices[5]
     }
@@ -36,9 +35,7 @@ class ViewController: UIViewController {
         diceImageView1.image = dices[leftDiceNumber]
         diceImageView2.image = dices[rightDiceNumber]
 
-        leftDiceNumber=leftDiceNumber+1
-        rightDiceNumber=rightDiceNumber-1
+        leftDiceNumber = leftDiceNumber + 1
+        rightDiceNumber = rightDiceNumber - 1
     }
-    
 }
-
